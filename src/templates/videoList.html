@@ -2,7 +2,7 @@
   
   <!-- <video-list-entry>{{$ctrl.videos[0].snippet.title}}</video-list-entry> -->
     
-  <video-list-entry ng-repeat="video in $ctrl.videos" video=video  on-click={{$ctrl.onClick}}></video-list-entry>
+  <video-list-entry ng-repeat="video in $ctrl.videos" video=video  action="$ctrl.onClick" index=$index></video-list-entry>
 </ul>
 
 <!-- we need to pass a single video to videolistentry -->
