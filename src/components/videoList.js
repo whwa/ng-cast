@@ -8,7 +8,7 @@ angular.module('video-player')
   bindings: {
     videos: '<',
     video: '<',
-    index: '=',
+    index: '<',
     action: '<'
   },
   templateUrl: 'src/templates/videoList.html',

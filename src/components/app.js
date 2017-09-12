@@ -9,10 +9,12 @@ angular.module('video-player')
       this.index = index;
       this.video = this.videos[this.index];
     };
-    youTube.search((data) => {
-      this.videos = data;
-      this.video = this.videos[0];
-    });
+    this.getData = (searchString) => {
+      youTube.search(searchString, (data) => {
+        this.videos = data;
+        this.video = this.videos[0];
+      });
+    };
   },
   templateUrl: '/src/templates/app.html'
 });

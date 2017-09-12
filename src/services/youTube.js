@@ -1,12 +1,12 @@
 angular.module('video-player')
 .service('youTube', function($http) {
-  this.search = function(cb) {
+  this.search = function(query, cb) {
     
     $http({
       method: 'GET',
       url: 'https://www.googleapis.com/youtube/v3/search',
       params: {
-        q: 'tiny animals eating',
+        q: query,
         maxResults: 5,
         part: 'snippet',
         type: 'video',
