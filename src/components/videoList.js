@@ -1,17 +1,15 @@
 angular.module('video-player')
 .component('videoList', {
   controller: function() {
-    this.onClick = function(index) { 
-      // return function() {
-      //   alert('clicked');
-      // };
-      console.log('clickeddd', index, this);
+    this.onClick = (index) => { 
+      this.action(index);
     };
   },
   bindings: {
     videos: '<',
     video: '<',
-    index: '='
+    index: '=',
+    action: '<'
   },
   templateUrl: 'src/templates/videoList.html',
   

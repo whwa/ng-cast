@@ -5,13 +5,10 @@ angular.module('video-player')
     this.videos = exampleVideoData;
     this.index = 0;
     this.video = exampleVideoData[this.index];
-    // console.log(this)
-    this.selectVideo = function() {
-      //changes selected video by changing index
+    this.selectVideo = (index) => {
+      this.index = index;
+      this.video = exampleVideoData[this.index];
     };
   },
-  // bindings: {
-  //   videos: '<'
-  // },
   templateUrl: '/src/templates/app.html'
 });
